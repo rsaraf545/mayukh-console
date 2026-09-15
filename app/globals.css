@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mayukh's palette, warmed onto the wood plate the shell sits on:
+     dark roasted browns rather than forest green, gold from the logo mark. */
+  --color-ground: #14100c;
+  --color-panel: rgba(30, 24, 18, 0.82);
+  --color-raise: rgba(44, 35, 26, 0.86);
+  --color-line: #3a2e23;
+  --color-line-soft: #2a211a;
+  --color-ink: #f4efe4;
+  --color-ink-2: #c9c2b0;
+  --color-ink-3: #9aa79c;
+  --color-accent: #d6af73;
+  --color-accent-deep: #a98247;
+  --color-sage: #8fae87;
+  --color-rust: #c1735c;
+  --color-blush: #e8c4be;
+
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ground) url("/bg/wood.jpg") center / cover fixed no-repeat;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+/* Paper grain — keeps the deep green from reading as flat SaaS dark mode. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 1;
+  background:
+    linear-gradient(180deg, rgba(14, 11, 8, 0.74) 0%, rgba(14, 11, 8, 0.58) 42%, rgba(14, 11, 8, 0.80) 100%),
+    radial-gradient(1200px 600px at 78% -10%, rgba(214, 175, 115, 0.07), transparent 60%);
+}
+
+::selection {
+  background: rgba(214, 175, 115, 0.28);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 1; }
+}
+@keyframes caret {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes sweep {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(400%); }
+}
+
+.rise { animation: rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+/* Same motion, but for user-triggered reveals, which keep animating after a restore. */
+.reveal { animation: rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+/* A tab restored from sessionStorage renders its final state with no staged reveal. */
+[data-instant] .stage-rise { animation: none; }
+.pulse-soft { animation: pulse-soft 1.4s ease-in-out infinite; }
+.caret { animation: caret 1s step-end infinite; }
+.sweep { animation: sweep 1.15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+
+/* Soft UI Evolution: generous, low-contrast shadows instead of hard edges. */
+.shadow-soft { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 26px -16px rgba(0, 0, 0, 0.6); }
+.shadow-soft-lg { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.32), 0 18px 40px -18px rgba(0, 0, 0, 0.65); }
+
+button:not(:disabled), [role="button"] { cursor: pointer; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Quiet scrollbars — this is meant to read as an internal tool. */
+* { scrollbar-width: thin; scrollbar-color: #2c4436 transparent; }
+
+
+/* Panels float on the wood: blurred, so grain never competes with type. */
+.bg-panel, .bg-raise { backdrop-filter: blur(10px) saturate(1.05); }

@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.vercel/
+out/
+shots/
+*.log
+.DS_Store
+.env*
+RESEARCH.md
+RESEARCH-GLOBAL.md
