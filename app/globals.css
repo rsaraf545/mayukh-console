@@ -27,14 +27,15 @@ html {
 }
 
 body {
-  background: var(--color-ground) url("/bg/wood.jpg") center / cover fixed no-repeat;
+  background: var(--color-ground) url("/bg/wood-tin.jpg") center / cover fixed no-repeat;
+  transition: background-image 320ms ease;
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
 }
 
-/* Paper grain — keeps the deep green from reading as flat SaaS dark mode. */
+/* Paper grain , keeps the deep green from reading as flat SaaS dark mode. */
 body::before {
   content: "";
   position: fixed;
@@ -97,9 +98,16 @@ button:not(:disabled), [role="button"] { cursor: pointer; }
   }
 }
 
-/* Quiet scrollbars — this is meant to read as an internal tool. */
+/* Quiet scrollbars , this is meant to read as an internal tool. */
 * { scrollbar-width: thin; scrollbar-color: #2c4436 transparent; }
 
 
 /* Panels float on the wood: blurred, so grain never competes with type. */
 .bg-panel, .bg-raise { backdrop-filter: blur(10px) saturate(1.05); }
+
+
+/* Per-tab watermark. The storyteller tab is the one about the product, so it
+   gets the pack; the marketer and scout sit with the tin on the shelf. */
+html[data-tab="storyteller"] body {
+  background-image: url("/bg/wood-pack.jpg");
+}

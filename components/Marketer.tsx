@@ -96,7 +96,7 @@ export default function Marketer() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auto]);
 
-  // As each new stage reveals, make it the one open section — the founder
+  // As each new stage reveals, make it the one open section, the founder
   // watches the most important thing surface instead of a wall of content.
   useEffect(() => {
     if (stage >= 3) setOpenSection("output");

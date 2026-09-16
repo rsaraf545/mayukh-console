@@ -1,4 +1,4 @@
-// THE SCOUT — an early-warning system, not a tasting panel.
+// THE SCOUT, an early-warning system, not a tasting panel.
 // Three datasets. Only the first one is public, and the first one is worthless alone.
 import { makeWaveform } from "../wave.ts";
 
@@ -81,7 +81,7 @@ export type VoiceNote = {
 };
 
 export const VOICE_NOTES_NOTE =
-  "Manager names below are illustrative. The gardens, the network and the weekly cadence are the real model — the four people are composites created for this demo.";
+  "Manager names below are illustrative. The gardens, the network and the weekly cadence are the real model, the four people are composites created for this demo.";
 
 export const NETWORK =
   "40 garden managers · one voice note every Sunday morning plus anything urgent · running since March 2021 · 288 Sundays · 10,400 notes in the archive";
@@ -96,8 +96,8 @@ export const VOICE_NOTES: VoiceNote[] = [
     duration: "1:14",
     language: "Nepali",
     wave: makeWaveform(48, 2, [8, 9, 21, 22, 33, 40]),
-    original: `नमस्ते सर, बिकाश बोल्दैछु गिद्दापहाडबाट। हिजो राति असिना पर्‍यो, करिब एघार बजेदेखि एक बजेसम्म। सेक्सन दुई, तीन र छ मा माथिको पात पूरै झरेको छ। अहिले टिप्न मिल्दैन, कम्तीमा दश दिन पर्खनुपर्छ। यो पटक अटम धेरै कम हुन्छ — मेरो अनुमानमा तीस प्रतिशत जति घट्छ। अर्को कुरा, बोट आफैं कमजोर भएको छ, त्यसैले अर्को वर्षको फर्स्ट फ्लस पनि ढिलो हुन सक्छ।`,
-    english: `Namaste sir, this is Bikash from Giddapahar. It hailed last night, roughly eleven until one. In sections two, three and six the top leaf has come off completely. We cannot pluck now, we will have to wait at least ten days. The autumn will be much less this time — my estimate is down about thirty per cent. One more thing: the bush itself has been weakened, so next year's first flush could also come late.`,
+    original: `नमस्ते सर, बिकाश बोल्दैछु गिद्दापहाडबाट। हिजो राति असिना पर्‍यो, करिब एघार बजेदेखि एक बजेसम्म। सेक्सन दुई, तीन र छ मा माथिको पात पूरै झरेको छ। अहिले टिप्न मिल्दैन, कम्तीमा दश दिन पर्खनुपर्छ। यो पटक अटम धेरै कम हुन्छ, मेरो अनुमानमा तीस प्रतिशत जति घट्छ। अर्को कुरा, बोट आफैं कमजोर भएको छ, त्यसैले अर्को वर्षको फर्स्ट फ्लस पनि ढिलो हुन सक्छ।`,
+    english: `Namaste sir, this is Bikash from Giddapahar. It hailed last night, roughly eleven until one. In sections two, three and six the top leaf has come off completely. We cannot pluck now, we will have to wait at least ten days. The autumn will be much less this time, my estimate is down about thirty per cent. One more thing: the bush itself has been weakened, so next year's first flush could also come late.`,
     facts: [
       { label: "Event", value: "Hail, 12–13 Sep, ~2 hrs" },
       { label: "Damage", value: "Top leaf stripped · sections 2, 3, 6" },
@@ -220,9 +220,9 @@ export const PRECEDENTS: Record<string, Precedent[]> = {
     {
       year: 2019,
       garden: "Arya",
-      // ponytail: normals are illustrative — verify against the IMD Darjeeling series before stage.
+      // ponytail: normals are illustrative, verify against the IMD Darjeeling series before stage.
       trigger:
-        "Warm dry February — 9mm against a 28mm normal, and the warmest nights on our record.",
+        "Warm dry February, 9mm against a 28mm normal, and the warmest nights on our record.",
       outcome: "First flush volume 34% short. Plucking began 9 days late.",
       held: "Sold out in 11 days at full price. We turned away 60 orders and had nothing to offer them.",
     },
@@ -241,11 +241,11 @@ export const PRECEDENTS: Record<string, Precedent[]> = {
 export const NOT_A_PRICE_BET = {
   title: "This is not a bet on the Darjeeling price",
   lines: [
-    "A general Darjeeling shortage does not lift the price. The hills shut for 104 days in 2017 and the crop fell to 3.2 million kg. Producers expected a 20–30% uptick when Darjeeling came back in 2018 and got none — blenders and importers had quietly switched to Nepali tea, grown at almost the same altitude just across the border, at about half the price.",
+    "A general Darjeeling shortage does not lift the price. The hills shut for 104 days in 2017 and the crop fell to 3.2 million kg. Producers expected a 20–30% uptick when Darjeeling came back in 2018 and got none, blenders and importers had quietly switched to Nepali tea, grown at almost the same altitude just across the border, at about half the price.",
     "India imported roughly 15.95 million kg of Nepali tea in 2024. Darjeeling grew 5.71 million kg that year. Nepal ships India about three times as much tea as Darjeeling produces, and that is the ceiling on the commodity price.",
     "The Kolkata auction averaged ₹420.95/kg in 2025 against a stated cost of production of at least ₹550/kg. The commodity average is under water. Only the named, storied, directly sold lot makes money.",
     "Only 20–25% of the crop moves through that auction; the rest is sold privately, garden to buyer. The public signal forms late and from a minority of the crop, which is exactly why a manager's voice note at 06:24 beats the catalogue.",
-    "So the instruction is never buy before the price rises. It is: sell what you already own, at full price, to the people who asked for that garden by name — while you still have their attention, and before you talk yourself into a discount.",
+    "So the instruction is never buy before the price rises. It is: sell what you already own, at full price, to the people who asked for that garden by name, while you still have their attention, and before you talk yourself into a discount.",
   ],
 };
 
@@ -288,7 +288,7 @@ export const ACTIONS: Action[] = [
     garden: "Giddapahar",
     prediction: "Giddapahar's autumn flush will be short this year.",
     basis:
-      "Hail on the night of the 12th stripped the top leaf off three sections. Plucking is stopped for about ten days and the manager's own estimate is thirty per cent down. The last time this happened at this garden — hail, September, the same sections, 2014 — we were holding 55 kg of the previous year's Giddapahar and it cleared in nine days at full price.",
+      "Hail on the night of the 12th stripped the top leaf off three sections. Plucking is stopped for about ten days and the manager's own estimate is thirty per cent down. The last time this happened at this garden, hail, September, the same sections, 2014, we were holding 55 kg of the previous year's Giddapahar and it cleared in nine days at full price.",
     stockKg: 40,
     stockLot: "Giddapahar Autumn Flush 2025 · DJ-127/2025",
     retailPerKg: 9800,
@@ -304,7 +304,7 @@ export const ACTIONS: Action[] = [
     instruction: "Message them today, at full price, before the news gets out.",
     windowDays: 9,
     windowReason:
-      "This is an attention deadline, not a market one. Today, “it hailed on Giddapahar” is a specific thing you can tell 200 people who know that slope by name. Within about a fortnight it flattens into “Darjeeling is short this year”, which is a headline — and a headline makes a buyer shop around instead of reply.",
+      "This is an attention deadline, not a market one. Today, “it hailed on Giddapahar” is a specific thing you can tell 200 people who know that slope by name. Within about a fortnight it flattens into “Darjeeling is short this year”, which is a headline, and a headline makes a buyer shop around instead of reply.",
     suppression:
       "Excludes 14 who ordered something else in the last 30 days and 3 who opted down to seasonal-only. Sends as 183.",
     confidence:
@@ -315,15 +315,13 @@ export const ACTIONS: Action[] = [
         channel: "WhatsApp · send from the store number, not a broadcast tool",
         body: `You bought Giddapahar autumn from us last October. I wanted to tell you something before it turns into general news.
 
-It hailed on Giddapahar on the night of the 12th. Bikash, who runs the garden, sent me a voice note the next morning — the top leaf is off three sections and they cannot pluck for about ten days. This year's autumn off that garden will be roughly a third down.
+It hailed on Giddapahar on the night of the 12th. Bikash, who runs the garden, sent me a voice note the next morning, the top leaf is off three sections and they cannot pluck for about ten days. This year's autumn off that garden will be roughly a third down.
 
 We still have 40 kg of last year's Giddapahar autumn. Same garden, same slope, the lot you already know.
 
 It is at the normal price, ₹980 for 100g, and it is not going on discount.
 
-If you want one, reply with a number and I will set it aside today.
-
-— Rupesh`,
+If you want one, reply with a number and I will set it aside today., Rupesh`,
       },
       {
         channel: "Email · to the 147 who have opened recently",
@@ -332,15 +330,13 @@ If you want one, reply with a number and I will set it aside today.
 
 That is the end of the autumn plucking on those sections for at least ten days. His own estimate is that the garden's autumn will come in about thirty per cent short.
 
-The last time this happened here was 2014. We were holding some of the previous year's Giddapahar at the time, and it was gone in nine days — almost all of it to people who already knew the garden.
+The last time this happened here was 2014. We were holding some of the previous year's Giddapahar at the time, and it was gone in nine days, almost all of it to people who already knew the garden.
 
 You are one of those people. You bought Giddapahar autumn from us last October.
 
 We have 40 kg of that lot left. It is ₹980 for 100g, which is what it was last week and what it will be next week. We are not discounting it and we are not marking it up on you either.
 
-We are writing to you first because you have had this tea before, and because in a fortnight this stops being a thing about one garden and becomes a thing about Darjeeling in general, which is far less interesting and far less true.
-
-— Rupesh Pradhan, Mayukh Tea, Darjeeling`,
+We are writing to you first because you have had this tea before, and because in a fortnight this stops being a thing about one garden and becomes a thing about Darjeeling in general, which is far less interesting and far less true., Rupesh Pradhan, Mayukh Tea, Darjeeling`,
       },
     ],
   },
@@ -348,7 +344,7 @@ We are writing to you first because you have had this tea before, and because in
     id: "A-02",
     garden: "Castleton",
     prediction:
-      "Castleton's gap is a road, not the leaf. It closes in a week — and the story closes with it.",
+      "Castleton's gap is a road, not the leaf. It closes in a week, and the story closes with it.",
     basis:
       "Eighty-one millimetres in six hours took out the section seven access road. Forty pluckers are on repair, so output halves for three days while the leaf itself sits there undamaged. In 2018 this exact pattern ran three weeks at half output and our remaining prior-year Castleton went to the collector list in eleven days at full price. In 2023 we let a comparable Turzum week pass without saying anything, and that stock was still on the shelf in February.",
     stockKg: 13,
@@ -358,7 +354,7 @@ We are writing to you first because you have had this tea before, and because in
     packGrams: 50,
     packsPerOrder: 1.4,
     thenWhat:
-      "Collectors first, and only collectors for 72 hours. This lot has never been on the site at a discount and it should not start now — whatever is left after the collector window goes to the 2026 allocation waitlist.",
+      "Collectors first, and only collectors for 72 hours. This lot has never been on the site at a discount and it should not start now, whatever is left after the collector window goes to the 2026 allocation waitlist.",
     lapsedBuyers: 61,
     lapsedDetail:
       "61 collector-list buyers took the 2025 Castleton. 38 have bought a single-estate second flush from you in each of the last three years and have nothing from 2026 yet.",
@@ -367,7 +363,7 @@ We are writing to you first because you have had this tea before, and because in
       "Write to the 61 collectors this week, at full price. Do not wait for the road to reopen.",
     windowDays: 16,
     windowReason:
-      "Narrative window, not a price window. The road is expected back inside a week; once Castleton is plucking again the trade stops talking about it and the reason to write disappears with the story. Nothing here forecasts what Castleton will cost — only that the sixty-one people who want this specific garden are reachable now and distracted later.",
+      "Narrative window, not a price window. The road is expected back inside a week; once Castleton is plucking again the trade stops talking about it and the reason to write disappears with the story. Nothing here forecasts what Castleton will cost, only that the sixty-one people who want this specific garden are reachable now and distracted later.",
     suppression: "Excludes 4 who already hold a 2026 Castleton allocation. Sends as 57.",
     confidence:
       "Medium-high. Single-source manager report, but consistent with the public slope-failure advisory for the Kurseong block.",
@@ -384,11 +380,9 @@ Nothing has happened to the bush. This is not a quality event and it is not a pr
 
 What we learned in 2018, when the same thing happened here, is something else. The people who want Castleton are not shopping for Darjeeling. They want Castleton. There is no other garden lying around that will do instead, which is why our remaining stock that year went in eleven days without a discount and without a deadline.
 
-You have the 2025 Castleton. We have 13 kg of it left — about 260 fifty-gram tins.
+You have the 2025 Castleton. We have 13 kg of it left, about 260 fifty-gram tins.
 
-₹1,400 for 50g, unchanged, not going on offer. Reply and we will hold one.
-
-— Rupesh`,
+₹1,400 for 50g, unchanged, not going on offer. Reply and we will hold one., Rupesh`,
       },
     ],
   },
@@ -396,9 +390,9 @@ You have the 2025 Castleton. We have 13 kg of it left — about 260 fifty-gram t
     id: "A-03",
     garden: "Arya",
     prediction:
-      "Arya's 2027 first flush will be late and short. The move is not to sell faster — it is to sell next spring, now.",
+      "Arya's 2027 first flush will be late and short. The move is not to sell faster, it is to sell next spring, now.",
     basis:
-      "No rain at Arya since the second, the tank is nearly empty and the upper sections are on alternate-day watering. Sunita is already saying it out loud. The regional winter outlook is 1.4°C warm, which is the 2019 and 2021 signal shape — and in 2019 Arya's first flush came in 34% short and nine days late, sold out in eleven days at full price, and we turned away sixty orders with nothing to offer them.",
+      "No rain at Arya since the second, the tank is nearly empty and the upper sections are on alternate-day watering. Sunita is already saying it out loud. The regional winter outlook is 1.4°C warm, which is the 2019 and 2021 signal shape, and in 2019 Arya's first flush came in 34% short and nine days late, sold out in eleven days at full price, and we turned away sixty orders with nothing to offer them.",
     stockKg: 24,
     stockLot: "Arya First Flush 2026 (Ruby) · DJ-21/2026",
     retailPerKg: 14800,
@@ -434,9 +428,7 @@ So, two things.
 
 We have 24 kg of this spring's Arya Ruby left, at ₹740 for 50g. That price is unchanged and it is not going on offer.
 
-And we are opening reservations for the 2027 first flush now. No payment today. If the spring comes in fine, you have simply reserved good tea early. If it comes in the way we think it will, you have a tin of a garden that will not be available at all by the middle of April — and unlike most Darjeeling, there is nothing else that tastes like Arya to fall back on.
-
-— Rupesh`,
+And we are opening reservations for the 2027 first flush now. No payment today. If the spring comes in fine, you have simply reserved good tea early. If it comes in the way we think it will, you have a tin of a garden that will not be available at all by the middle of April, and unlike most Darjeeling, there is nothing else that tastes like Arya to fall back on., Rupesh`,
       },
     ],
   },

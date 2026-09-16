@@ -27,15 +27,21 @@ function Wordmark() {
 export default function Page() {
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("marketer");
 
-  // ?tab=marketer|storyteller|scout — read once, for bookmarks and screenshots.
+  // ?tab=marketer|storyteller|scout, read once, for bookmarks and screenshots.
   useEffect(() => {
     const q = new URLSearchParams(window.location.search).get("tab");
     if (TABS.some((t) => t.id === q)) setTab(q as (typeof TABS)[number]["id"]);
   }, []);
 
+  // The watermark behind the shell changes with the tab: the storyteller gets
+  // the pack, the other two get the tin on the shelf.
+  useEffect(() => {
+    document.documentElement.dataset.tab = tab;
+  }, [tab]);
+
   return (
     <div className="min-h-screen">
-      {/* App bar — thin, quiet: brand, horizontal section links, utility icons, avatar. */}
+      {/* App bar, thin, quiet: brand, horizontal section links, utility icons, avatar. */}
       <header className="sticky top-0 z-20 border-b border-line bg-ground/92 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1180px] flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3 md:px-10">
           <div className="flex shrink-0 items-center gap-3">
@@ -87,7 +93,7 @@ export default function Page() {
             <Avatar name="Rupesh Pradhan" size={32} />
           </div>
         </div>
-        {/* Mobile-only honesty badge — desktop shows it in the utility row above. */}
+        {/* Mobile-only honesty badge, desktop shows it in the utility row above. */}
         <div className="border-t border-line-soft px-6 py-1.5 md:hidden">
           <span className="flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-3">
             <span className="pulse-soft inline-block h-1.5 w-1.5 rounded-full bg-sage" />

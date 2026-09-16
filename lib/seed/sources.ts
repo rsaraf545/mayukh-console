@@ -1,5 +1,5 @@
 // What each tab would read from in production, and what is actually wired.
-// Nothing here is connected — the console is a prototype running on seeded data.
+// Nothing here is connected, the console is a prototype running on seeded data.
 
 export type SourceStatus = "connected" | "not-connected" | "does-not-exist";
 
@@ -25,7 +25,7 @@ export const SOURCES: Record<"marketer" | "storyteller" | "scout", Source[]> = {
     },
     {
       name: "Meta Ad Library",
-      note: "Competitor creatives — public, no permission needed",
+      note: "Competitor creatives, public, no permission needed",
       status: "not-connected",
     },
     {
@@ -64,7 +64,7 @@ export const SOURCES: Record<"marketer" | "storyteller" | "scout", Source[]> = {
     },
     {
       name: "Weather feed",
-      note: "IMD and Open-Meteo — free tier, public",
+      note: "IMD and Open-Meteo, free tier, public",
       status: "not-connected",
     },
     {

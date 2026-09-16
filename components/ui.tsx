@@ -7,8 +7,7 @@ import type { Source } from "@/lib/seed/sources";
 type Status = "idle" | "thinking" | "done";
 
 /**
- * "Has this tab already been run this session." Only the boolean is stored —
- * the content is deterministic seed data, so there is nothing else worth keeping.
+ * "Has this tab already been run this session." Only the boolean is stored, * the content is deterministic seed data, so there is nothing else worth keeping.
  * sessionStorage throws in some privacy modes, hence the try/catch.
  */
 export const runFlag = {
@@ -107,7 +106,7 @@ export function useQueryFlag(key: string, value = "1") {
 }
 
 /**
- * Honest wiring status, collapsed by default. Nothing is connected — this is a
+ * Honest wiring status, collapsed by default. Nothing is connected, this is a
  * prototype on seeded data and the panel says so rather than implying otherwise.
  */
 export function DataSources({ sources }: { sources: Source[] }) {
@@ -189,7 +188,7 @@ export type PipelineStep = { source: string; action: string; landed: string };
 
 /**
  * Makes the plumbing visible: which named system (matching the Data sources
- * panel) is being read, and what landed — the sales argument of the whole
+ * panel) is being read, and what landed, the sales argument of the whole
  * product, not just a spinner. Steps light up in sequence with `index`.
  */
 export function Pipeline({
@@ -249,8 +248,7 @@ export function Pipeline({
 }
 
 /**
- * One collapsible section of a tab. Only one is meant to be open at a time —
- * the parent tab owns `isOpen` / `onToggle` so opening one can close the rest.
+ * One collapsible section of a tab. Only one is meant to be open at a time, * the parent tab owns `isOpen` / `onToggle` so opening one can close the rest.
  * This is the fix for "everything is expanded": a compact header up front,
  * full content only on click.
  */
@@ -381,7 +379,7 @@ export function Tag({
 }: {
   children: React.ReactNode;
   tone?: "line" | "accent" | "sage" | "rust" | "blush";
-  /** Renders a small × and makes the chip removable — the Odoo filter-chip pattern. */
+  /** Renders a small × and makes the chip removable, the Odoo filter-chip pattern. */
   onRemove?: () => void;
 }) {
   const tones = {
@@ -573,7 +571,7 @@ function IconArrow({ up, className = "h-3 w-3" }: { up: boolean; className?: str
   );
 }
 
-/** Small circular initials badge — the Odoo assignee-avatar pattern. */
+/** Small circular initials badge, the Odoo assignee-avatar pattern. */
 export function Avatar({
   name,
   size = 26,
@@ -601,7 +599,7 @@ export function Avatar({
   );
 }
 
-/** One clickable stat "button box" — a KPI at a glance, replacing a paragraph. */
+/** One clickable stat "button box", a KPI at a glance, replacing a paragraph. */
 export function StatTile({
   label,
   value,
@@ -650,7 +648,7 @@ export function StatRow({ children }: { children: React.ReactNode }) {
   return <div className="flex flex-wrap gap-3.5">{children}</div>;
 }
 
-/** A collapsed-by-default disclosure — where the prose goes until asked for. */
+/** A collapsed-by-default disclosure, where the prose goes until asked for. */
 export function Expander({
   label,
   openLabel,
@@ -682,7 +680,7 @@ export function Expander({
   );
 }
 
-/** Thin multi-segment bar — Odoo's per-stage progress indicator. */
+/** Thin multi-segment bar, Odoo's per-stage progress indicator. */
 export function SegmentedBar({
   segments,
 }: {
@@ -738,7 +736,7 @@ export function KanbanColumnHeader({
   );
 }
 
-/** Kanban / list view toggle — an icon-button group, Odoo-style. */
+/** Kanban / list view toggle, an icon-button group, Odoo-style. */
 export function ViewSwitcher({
   view,
   onChange,
@@ -769,7 +767,7 @@ export function ViewSwitcher({
 
 /**
  * The Odoo control-panel row: a filled primary action, a breadcrumb title,
- * a search field carrying removable chips, and — optionally — a view switcher.
+ * a search field carrying removable chips, and, optionally, a view switcher.
  */
 export function ControlBar({
   primary,

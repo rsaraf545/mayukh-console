@@ -1,4 +1,4 @@
-// Seeded weekly growth brief. Nothing here is fetched — the console is
+// Seeded weekly growth brief. Nothing here is fetched, the console is
 // deliberately offline-deterministic so it behaves identically on stage.
 
 export type Diagnosis = {
@@ -101,7 +101,7 @@ export const DIAGNOSIS: Diagnosis[] = [
       "₹1.94L spent in 28 days. An estimated ₹71,000 of it bought impressions you had already won.",
     ],
     read: "You are not competing with Vahdam. You are competing with yourself, and you are paying the premium to win.",
-    fix: "Collapse to one prospecting set and one retargeting set. Kill DJ–Broad–Interest outright — ₹63,000 spent in 28 days for 4 purchases, a ₹15,750 CAC. Reallocate its budget to the retarget ladder below.",
+    fix: "Collapse to one prospecting set and one retargeting set. Kill DJ–Broad–Interest outright, ₹63,000 spent in 28 days for 4 purchases, a ₹15,750 CAC. Reallocate its budget to the retarget ladder below.",
   },
   {
     id: "D-02",
@@ -110,13 +110,13 @@ export const DIAGNOSIS: Diagnosis[] = [
       "Your top Darjeeling already costs what London charges. It is sitting under a 55%-off banner.",
     stat: { value: "50×", caption: "internal price spread, unexplained" },
     evidence: [
-      "77 products, 97 variants live on mayukhtea.com. Your highest price is ₹59,980/kg — Arya Diamond First Flush 2026, ₹2,999 for 50g. Rare Tea Company in London sells its First Flush Darjeeling at roughly ₹58,000/kg. You are already there.",
+      "77 products, 97 variants live on mayukhtea.com. Your highest price is ₹59,980/kg, Arya Diamond First Flush 2026, ₹2,999 for 50g. Rare Tea Company in London sells its First Flush Darjeeling at roughly ₹58,000/kg. You are already there.",
       "On the same page, Traditional Muscatel Second Flush is ₹1,190/kg. That is a 50× internal spread, and nothing on the site explains why the expensive one is not a typing error.",
       "23 of 97 variants carry a live discount, averaging 30% and reaching 55%, under a homepage banner reading Special OFFER: Upto 55% OFF.",
-      "Darjeeling produced 5.60 million kg in 2025, down from 8.76 million kg in 2015 — the lowest on record outside the 2017 shutdown year. Supply is collapsing while the storefront signals surplus.",
+      "Darjeeling produced 5.60 million kg in 2025, down from 8.76 million kg in 2015, the lowest on record outside the 2017 shutdown year. Supply is collapsing while the storefront signals surplus.",
     ],
-    read: "You are not underpriced. You are unexplained. A 55%-off banner over a ₹2,999 tin does not make the tin look generous, it makes the price look arbitrary — and arbitrary is the one thing a collector will not pay for.",
-    fix: "Split the catalogue in two this week. Named single-estate lots — garden, flush, year, invoice number — never discounted, ever. Everything else can carry the promotion. You are most of the way there already: 18 SKUs are vintage-dated and two carry lot IDs in the title, EX-31 and EX-1. Specialty coffee charges a premium for exactly that and calls it a lot ID. You call it an invoice reference.",
+    read: "You are not underpriced. You are unexplained. A 55%-off banner over a ₹2,999 tin does not make the tin look generous, it makes the price look arbitrary, and arbitrary is the one thing a collector will not pay for.",
+    fix: "Split the catalogue in two this week. Named single-estate lots, garden, flush, year, invoice number, never discounted, ever. Everything else can carry the promotion. You are most of the way there already: 18 SKUs are vintage-dated and two carry lot IDs in the title, EX-31 and EX-1. Specialty coffee charges a premium for exactly that and calls it a lot ID. You call it an invoice reference.",
   },
   {
     id: "D-03",
@@ -142,7 +142,7 @@ export const DIAGNOSIS: Diagnosis[] = [
       "Your two highest-saving posts ever were both photographs of the garden in fog, posted in 2024, with no product in frame.",
       "Reach is 78% follower-only. Nothing in the grid is built to be sent to another person.",
     ],
-    read: "At 1,289 followers, saves and sends are the growth engine — not likes. Nobody saves a tin. People save a fact they want to repeat at dinner.",
+    read: "At 1,289 followers, saves and sends are the growth engine, not likes. Nobody saves a tin. People save a fact they want to repeat at dinner.",
     fix: "Three posts a week, all structured to be re-told: one fact about the leaf, one photograph from a named garden with the invoice number visible, one voice from the estate. Post 01 below is built specifically for saves.",
   },
 ];
@@ -181,7 +181,7 @@ Singtom estate. One lot, 214 kg, and no more of it.`,
     hook: "साल की आखिरी पत्ती",
     body: `अक्टूबर में दार्जिलिंग की झाड़ी को पता चल जाता है कि ठंड आ रही है।
 
-तब वो कुछ नहीं बचाती। अपनी आखिरी पत्तियों में सब कुछ भर देती है — गहराई, मिठास, और एक हल्की सी लकड़ी जैसी खुशबू जो पूरे साल में और कभी नहीं मिलती।
+तब वो कुछ नहीं बचाती। अपनी आखिरी पत्तियों में सब कुछ भर देती है, गहराई, मिठास, और एक हल्की सी लकड़ी जैसी खुशबू जो पूरे साल में और कभी नहीं मिलती।
 
 इसे ऑटम फ्लश कहते हैं। साल में एक बार, बस एक बार।
 
@@ -189,10 +189,10 @@ Singtom estate. One lot, 214 kg, and no more of it.`,
 
 सिंगटम बागान से इस साल 214 किलो। इतना ही है, और कुछ नहीं।`,
     gloss:
-      "Saal ki aakhri patti — In October the Darjeeling bush knows the cold is coming, so it holds nothing back and pours everything into its last leaves. Once a year, only once. After November the garden sleeps. 214 kg from Singtom this year. That is all there is.",
+      "Saal ki aakhri patti, In October the Darjeeling bush knows the cold is coming, so it holds nothing back and pours everything into its last leaves. Once a year, only once. After November the garden sleeps. 214 kg from Singtom this year. That is all there is.",
     tags: "#autumnflush #darjeelingtea #चाय #सिंगटम",
     craft:
-      "No voiceover. One locked-off shot of fog moving across the Singtom slope, Hindi text cut in on the beat. Silence performs better than a stock track on this account — the last three Reels with music held for 1.8s, the one without held for 6.1s.",
+      "No voiceover. One locked-off shot of fog moving across the Singtom slope, Hindi text cut in on the beat. Silence performs better than a stock track on this account, the last three Reels with music held for 1.8s, the one without held for 6.1s.",
   },
   {
     lang: "বাংলা",
@@ -204,7 +204,7 @@ Singtom estate. One lot, 214 kg, and no more of it.`,
 
 সিংটম, অটাম ফ্লাশ, ২০২৬।
 
-যাঁকে দিচ্ছেন তিনি বাগানটার নাম খুঁজে দেখতে পারবেন — দার্জিলিং-এর ঠিক কোন ঢালে, কোন উচ্চতায় এই পাতা তোলা হয়েছিল।
+যাঁকে দিচ্ছেন তিনি বাগানটার নাম খুঁজে দেখতে পারবেন, দার্জিলিং-এর ঠিক কোন ঢালে, কোন উচ্চতায় এই পাতা তোলা হয়েছিল।
 
 উপহারটা শেষ হয়ে যাবে। জায়গাটার নাম থেকে যাবে।`,
     gloss:
@@ -249,7 +249,7 @@ export const ADS: AdScript[] = [
         line: "Singtom estate. One lot. Two hundred and fourteen kilos, and then it is finished.",
       },
     ],
-    cta: "See what is left — mayukhtea.com",
+    cta: "See what is left, mayukhtea.com",
     why: "There is no offer in this script and that is the point. Cold audiences do not want a discount from a brand they have never heard of, they want a reason to believe the category is real. The fact is genuinely surprising, which is what makes it survive being re-told at a dinner table.",
   },
   {
@@ -280,7 +280,7 @@ export const ADS: AdScript[] = [
         line: "So there is no sale. There is a number on the shelf, and when it reaches zero we wait a year like everyone else.",
       },
     ],
-    cta: "Autumn Flush 2026 — 40 tins held",
+    cta: "Autumn Flush 2026, 40 tins held",
     why: "This ad makes the end of the discount itself the story instead of hiding it, which is the only way to retire a discount without punishing the people already in the funnel. On a retarget audience, founder-to-camera has held longer than produced film on this account. They have already seen your product; what they have not seen is a person.",
   },
 ];
@@ -328,7 +328,7 @@ export const WINBACK: FlowStep[] = [
     day: "Day 20",
     channel: "Email",
     subject: "We are closing the autumn list",
-    body: "Final note. Includes an opt-down link — 'write to me only when a garden I have bought from has a lot' — which converts a churned contact into a seasonal one instead of an unsubscribe.",
+    body: "Final note. Includes an opt-down link, 'write to me only when a garden I have bought from has a lot', which converts a churned contact into a seasonal one instead of an unsubscribe.",
     exit: "Non-openers move to the seasonal list. No further sends until the 2027 first flush.",
   },
 ];

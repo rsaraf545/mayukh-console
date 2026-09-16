@@ -105,7 +105,7 @@ export default function Storyteller() {
         </h2>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-2">
           One honest fifty-second recording, reaching a gifting buyer in Kolkata, a
-          collector in Hamburg, and a first-time drinker — without flattening it into ad
+          collector in Hamburg, and a first-time drinker, without flattening it into ad
           copy on the way.
         </p>
       </div>
@@ -210,7 +210,7 @@ export default function Storyteller() {
                 />
               ) : (
                 <span className="font-sans text-[14px] text-ink-3">
-                  Press play. Nothing is streamed — everything below is seeded locally.
+                  Press play. Nothing is streamed, everything below is seeded locally.
                 </span>
               )}
             </div>

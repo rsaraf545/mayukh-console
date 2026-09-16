@@ -63,7 +63,7 @@ export default function Scout() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auto]);
 
-  // Auto-advance which section is open as the scan reveals more — the newest,
+  // Auto-advance which section is open as the scan reveals more, the newest,
   // most decision-relevant layer takes over instead of stacking on the page.
   useEffect(() => {
     if (stage >= 3) setOpenSection("actions");
@@ -85,7 +85,7 @@ export default function Scout() {
           {PITCH}
         </p>
         <p className="mt-3 text-[14px] leading-relaxed text-ink-2">
-          Three datasets, joined. The output is never an observation — it is an
+          Three datasets, joined. The output is never an observation, it is an
           instruction with a garden, a number, a price and a deadline attached.
         </p>
       </div>
@@ -468,7 +468,7 @@ function ActionCard({ a, defaultOpen }: { a: Ranked; defaultOpen?: boolean }) {
               <Eyebrow tone="mute">Basis</Eyebrow>
               <p className="mt-2 text-[13px] leading-relaxed text-ink-2">{a.basis}</p>
               <p className="mt-2.5 font-mono text-[10px] leading-relaxed text-ink-3">
-                Confidence — {a.confidence}
+                Confidence, {a.confidence}
               </p>
             </div>
             <div>
